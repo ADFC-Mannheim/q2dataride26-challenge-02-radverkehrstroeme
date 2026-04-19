@@ -1,0 +1,5 @@
+# Ignoriere den kompletten Inhalt des Stadtradeln-Ordners
+data/stadtradeln/*
+
+# Die README-Datei behalten (Achte auf die genaue Schreibweise)
+!data/stadtradeln/readme.md
