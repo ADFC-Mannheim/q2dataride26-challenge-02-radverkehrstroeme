@@ -9,8 +9,8 @@ Diese Challenge nutzt reale Radverkehrsdaten, um zu analysieren, welche Routen u
 
 - **Stadtradeln-App-Daten (2022-2024)**  
   *Wichtig: Die Rohdaten sind ggf. lizenzbeschränkt und liegen nicht in diesem Repo (siehe Hinweise zum Datenzugriff).*
-- **Dauerradzählstellen Mannheim**  
-  (z.B. Eco-Counter Renzstraße)
+2. **Dauerradzählstellen Mannheim (`bike_counter.csv`)**  
+   Detaillierte Zähldaten (z.B. Eco-Counter Renzstraße). Diese Daten liegen direkt hier im Repository unter `data/radzaehlstellen/`.
 
 ## Leitfragen
 
@@ -24,7 +24,8 @@ Diese Challenge nutzt reale Radverkehrsdaten, um zu analysieren, welche Routen u
 ```text
 challenge-02-radverkehrstroeme/
 │
-├── data/                  # Daten-Ordner (Rohdaten via .gitignore ignoriert)
+├── data/
+│   ├── radzaehlstellen/   # Enthält die frei nutzbare bike_counter.csv
 │   └── stadtradeln/       # Hierhin die heruntergeladene .zip-Datei entpacken
 ├── notebooks/             # Jupyter Notebooks für Exploration & Analyse
 ├── src/                   # Python-Skripte (z.B. für Datenbereinigung oder Geodaten-Handling)
@@ -34,6 +35,9 @@ challenge-02-radverkehrstroeme/
 
 ## 🔒 Datenzugriff
 
-Die Rohdaten für diese Challenge (insbesondere die Stadtradeln-Daten) liegen **im Hauptordner** unter `data/stadtradeln/`. 
+### 1. Zählstellen-Daten (Frei verfügbar)
+Die Datei `bike_counter.csv` liegt bereits im Ordner `data/radzaehlstellen/`. Ihr könnt sie direkt in euren Notebooks einlesen (z.B. mit `pd.read_csv('../data/radzaehlstellen/bike_counter.csv')`).
 
-Da wir die Stadtradeln-Daten ggf. nicht öffentlich teilen dürfen, müsst ihr diese als `.zip`-Datei über den separaten Download-Link des Orga-Teams herunterladen. Entpackt die ZIP-Datei bitte exakt im Ordner `../../data/stadtradeln/`, sodass die Ordner `2022`, `2023` und `2024` dort liegen.
+### 2. Stadtradeln-Daten (Lizenzbeschränkt)
+Da wir die Stadtradeln-Daten ggf. nicht öffentlich teilen dürfen, müsst ihr diese als `.zip`-Datei über den separaten Download-Link des Orga-Teams herunterladen. 
+Bitte entpackt die ZIP-Datei exakt im Ordner `data/stadtradeln/` dieser Challenge, sodass die Ordner `2022`, `2023` und `2024` dort liegen.
