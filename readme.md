@@ -21,7 +21,7 @@ Diese Datensätze basieren auf per GPS aufgezeichneten Fahrten von Bürgern wäh
 Detaillierte Zähldaten der im Mannheimer Stadtgebiet fest installierten Induktionsschleifen und Eco-Counter (z.B. Friedrich-Ebert-Brücke, Kurpfalzbrücke). Diese Daten liegen direkt hier im Repository unter `data/radzaehlstellen/`.
 
 **⚠️ Herausforderungen bei der Analyse:**
-- **Lücken & Ausfälle:** Zählstellen können durch Baustellen (z.B. Sperrungen auf Brücken), technische Defekte oder Batteriewechsel temporär ausfallen, was zu Nullwerten in den Zeitreihen führt.
+- **Lücken & Ausfälle:** Zählstellen können durch Baustellen (z.B. Sperrungen auf Brücken), technische Defekte oder Batteriewechsel temporär ausfallen, was zu Nullwerten in den Zeitreihen.
 - **Witterungseffekte:** Die Zählungen schwanken extrem je nach Wetterlage (Regen, Schnee, Hitze). Eine Analyse (z.B. für Winterdienst-Priorisierung) erfordert oft die zusätzliche Einbindung historischer Wetterdaten.
 - **Punktuelle vs. Flächendeckende Daten:** Zählstellen liefern absolute, hochpräzise Zahlen, allerdings nur für exakt diese spezifischen Querschnitte. Sie müssen oft mit den flächendeckenden (aber weniger repräsentativen) Stadtradeln-Daten kombiniert werden.
 
@@ -38,7 +38,7 @@ challenge-02-radverkehrstroeme/
 │
 ├── data/
 │   ├── radzaehlstellen/   # Enthält die frei nutzbare bike_counter.csv
-│   └── stadtradeln/       # Hierhin die heruntergeladene .zip-Datei entpacken
+│   └── stadtradeln/       # Hierhin die Daten aus dem privaten Repo kopieren
 ├── notebooks/             # Jupyter Notebooks für Exploration & Analyse
 ├── src/                   # Python-Skripte (z.B. für Datenbereinigung oder Geodaten-Handling)
 ├── results/               # Generierte Karten, Charts und Präsentationen
@@ -51,5 +51,9 @@ challenge-02-radverkehrstroeme/
 Die Datei `bike_counter.csv` liegt bereits im Ordner `data/radzaehlstellen/`. Ihr könnt sie direkt in euren Notebooks einlesen (z.B. mit `pd.read_csv('../data/radzaehlstellen/bike_counter.csv')`).
 
 ### 2. Stadtradeln-Daten (Lizenzbeschränkt)
-Da wir die Stadtradeln-Daten ggf. nicht öffentlich teilen dürfen, müsst ihr diese als `.zip`-Datei über den separaten Download-Link des Orga-Teams herunterladen. 
-Bitte entpackt die ZIP-Datei exakt im Ordner `data/stadtradeln/` dieser Challenge, sodass die Ordner `2022`, `2023` und `2024` dort liegen.
+Da wir die Stadtradeln-Daten ggf. nicht öffentlich teilen dürfen, müsst ihr diese manuell aus unserem privaten Daten-Repository hinzufügen:
+
+1. Geht auf unsere [GitHub-Organisationsseite (Repositories)](https://github.com/ADFC-Mannheim?tab=repositories).
+2. Öffnet das private Repository **`q2dataride26-restricted-data`** *(Hinweis: Dieses seht ihr erst, nachdem ihr uns euren GitHub-Namen geschickt habt und von uns eingeladen wurdet).*
+3. Ladet euch die Daten aus dem privaten Repo herunter.
+4. Kopiert die Ordner `2022`, `2023` und `2024` aus dem dortigen Verzeichnis exakt hier in diesen lokalen Ordner (`data/stadtradeln/`).
